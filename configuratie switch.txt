@@ -1,0 +1,19 @@
+configuratie switch
+
+enable
+configure terminal
+hostname PXLswitch1
+
+line console 0
+password pxl
+login
+exit
+
+username admin password pxl
+
+interface vlan 1
+ip adress 192.168.0.12 255.255.255.240
+no shutdown
+exit
+
+ip default-gateway 192.168.0.1

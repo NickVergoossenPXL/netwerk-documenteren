@@ -1,0 +1,19 @@
+configuratie router
+
+enable
+configure terminal
+interface g0/0
+ip address 192.168.0.1 255.255.255.240
+no shutdown
+exit
+
+enable secret pxl
+
+service password-encryption
+
+hostname admin
+ip domain-name PXL
+
+crypto key generate rsa
+2048
+line vty 0 15
